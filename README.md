@@ -39,7 +39,9 @@ Meningkatkan efisiensi distribusi
 Graph adalah struktur data yang terdiri dari node (vertex) dan edge (hubungan antar node). Dalam kasus ini:
 
 Node = lokasi pengiriman
+
 Edge = jalur antar lokasi
+
 Bobot = jarak atau waktu tempuh
 
 Graph yang digunakan adalah weighted graph, karena setiap edge memiliki nilai.
@@ -54,8 +56,9 @@ Algoritma Dijkstra digunakan untuk mencari jalur terpendek dari satu node ke nod
 
 Kelebihan:
 
-Akurat untuk graph berbobot positif
-Efisien untuk pencarian rute
+-Akurat untuk graph berbobot positif
+
+-Efisien untuk pencarian rute
 
 📘 BAB 3 – ANALISIS DAN PERANCANGAN
 
@@ -114,10 +117,13 @@ Menghasilkan rute terpendek
 
 Sistem memiliki fitur:
 
-Input lokasi
-Input jarak
-Tombol proses
-Output rute
+-Input lokasi
+
+-Input jarak
+
+-Tombol proses
+
+-Output rute
 
 📘 BAB 5 – PENGUJIAN DAN ANALISIS
 
@@ -128,6 +134,7 @@ Dari node A ke D
 
 Hasil:
 Rute terbaik: A → B → D
+
 Total jarak: 8 km
 
 5.2 Analisis Hasil
@@ -138,17 +145,24 @@ Hasil menunjukkan bahwa sistem mampu menentukan rute terpendek secara akurat ber
 
 Algoritma Dijkstra memiliki kompleksitas:
 
-O(V²) (versi sederhana)
-O(E log V) (menggunakan priority queue)
+-O(V²) (versi sederhana)
+
+-O(E log V) (menggunakan priority queue)
 
 📘 BAB 6 – KESIMPULAN
 
 6.1 Kesimpulan
 
-Graph efektif untuk memodelkan rute kurir
-Algoritma Dijkstra berhasil menentukan jalur optimal
-DSS membantu pengambilan keputusan secara cepat dan akurat
+-Graph efektif untuk memodelkan rute kurir
+
+-Algoritma Dijkstra berhasil menentukan jalur optimal
+
+-DSS membantu pengambilan keputusan secara cepat dan akurat
+
 6.2 Saran
-Menambahkan data real-time (traffic)
-Mengembangkan sistem berbasis web/mobile
-Menggunakan algoritma lain seperti A*
+
+-Menambahkan data real-time (traffic)
+
+-Mengembangkan sistem berbasis web/mobile
+
+-Menggunakan algoritma lain seperti A*
