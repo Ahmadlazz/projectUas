@@ -11,19 +11,25 @@ Dengan memanfaatkan struktur data graph, permasalahan tersebut dapat dimodelkan 
 1.2 Rumusan Masalah
 
 Bagaimana merepresentasikan sistem rute kurir menggunakan graph?
+
 Bagaimana menentukan rute tercepat antar lokasi?
+
 Bagaimana mengimplementasikan algoritma graph dalam DSS?
 
 1.3 Tujuan
 
 Membuat model graph untuk sistem rute kurir
+
 Mengimplementasikan algoritma Dijkstra
+
 Menghasilkan rekomendasi rute terbaik
 
 1.4 Manfaat
 
 Membantu kurir menentukan rute optimal
+
 Menghemat waktu dan biaya
+
 Meningkatkan efisiensi distribusi
 
 📘 BAB 2 – DASAR TEORI
