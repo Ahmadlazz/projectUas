@@ -1,6 +1,7 @@
 # projectUas
 
 📘 BAB 1 – PENDAHULUAN
+
 1.1 Latar Belakang
 
 Dalam era digital saat ini, proses pengiriman barang menjadi semakin penting dalam mendukung aktivitas bisnis dan logistik. Kurir sering menghadapi permasalahan dalam menentukan rute pengiriman yang optimal karena banyaknya pilihan jalur yang tersedia. Pemilihan rute yang tidak efisien dapat menyebabkan keterlambatan pengiriman serta peningkatan biaya operasional.
@@ -8,18 +9,25 @@ Dalam era digital saat ini, proses pengiriman barang menjadi semakin penting dal
 Dengan memanfaatkan struktur data graph, permasalahan tersebut dapat dimodelkan secara matematis, di mana setiap lokasi direpresentasikan sebagai node dan jalur antar lokasi sebagai edge. Oleh karena itu, diperlukan sebuah Decision Support System (DSS) yang mampu membantu menentukan rute terbaik secara otomatis.
 
 1.2 Rumusan Masalah
+
 Bagaimana merepresentasikan sistem rute kurir menggunakan graph?
 Bagaimana menentukan rute tercepat antar lokasi?
 Bagaimana mengimplementasikan algoritma graph dalam DSS?
+
 1.3 Tujuan
+
 Membuat model graph untuk sistem rute kurir
 Mengimplementasikan algoritma Dijkstra
 Menghasilkan rekomendasi rute terbaik
+
 1.4 Manfaat
+
 Membantu kurir menentukan rute optimal
 Menghemat waktu dan biaya
 Meningkatkan efisiensi distribusi
+
 📘 BAB 2 – DASAR TEORI
+
 2.1 Struktur Data Graph
 
 Graph adalah struktur data yang terdiri dari node (vertex) dan edge (hubungan antar node). Dalam kasus ini:
@@ -42,7 +50,9 @@ Kelebihan:
 
 Akurat untuk graph berbobot positif
 Efisien untuk pencarian rute
+
 📘 BAB 3 – ANALISIS DAN PERANCANGAN
+
 3.1 Analisis Masalah
 
 Permasalahan utama adalah menentukan rute tercepat dari titik awal ke tujuan dengan mempertimbangkan jarak antar lokasi.
@@ -79,7 +89,9 @@ Melihat hasil rute
 Node: lokasi pengiriman
 Edge: jalur antar lokasi
 Weight: jarak
+
 📘 BAB 4 – IMPLEMENTASI
+
 4.1 Implementasi Sistem
 
 Sistem dibangun menggunakan bahasa pemrograman (misalnya Python). Graph direpresentasikan menggunakan adjacency list.
@@ -91,6 +103,7 @@ Program bekerja dengan:
 Membaca data graph
 Menjalankan algoritma Dijkstra
 Menghasilkan rute terpendek
+
 4.3 Tampilan Sistem
 
 Sistem memiliki fitur:
@@ -99,7 +112,9 @@ Input lokasi
 Input jarak
 Tombol proses
 Output rute
+
 📘 BAB 5 – PENGUJIAN DAN ANALISIS
+
 5.1 Skenario Pengujian
 
 Contoh:
@@ -119,8 +134,11 @@ Algoritma Dijkstra memiliki kompleksitas:
 
 O(V²) (versi sederhana)
 O(E log V) (menggunakan priority queue)
+
 📘 BAB 6 – KESIMPULAN
+
 6.1 Kesimpulan
+
 Graph efektif untuk memodelkan rute kurir
 Algoritma Dijkstra berhasil menentukan jalur optimal
 DSS membantu pengambilan keputusan secara cepat dan akurat
