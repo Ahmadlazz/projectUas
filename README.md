@@ -1,168 +1,190 @@
 # projectUas
 
-📘 BAB 1 – PENDAHULUAN
+# **BAB 1 – PENDAHULUAN**
 
-1.1 Latar Belakang
+## 1.1 Latar Belakang
 
-Dalam era digital saat ini, proses pengiriman barang menjadi semakin penting dalam mendukung aktivitas bisnis dan logistik. Kurir sering menghadapi permasalahan dalam menentukan rute pengiriman yang optimal karena banyaknya pilihan jalur yang tersedia. Pemilihan rute yang tidak efisien dapat menyebabkan keterlambatan pengiriman serta peningkatan biaya operasional.
+Dalam proses pengiriman barang, seorang kurir sering dihadapkan pada banyak pilihan rute untuk mencapai tujuan. Jika pemilihan rute tidak tepat, maka waktu pengiriman bisa menjadi lebih lama dan biaya operasional juga meningkat. Hal ini menjadi tantangan terutama ketika jumlah lokasi pengiriman cukup banyak dan saling terhubung.
 
-Dengan memanfaatkan struktur data graph, permasalahan tersebut dapat dimodelkan secara matematis, di mana setiap lokasi direpresentasikan sebagai node dan jalur antar lokasi sebagai edge. Oleh karena itu, diperlukan sebuah Decision Support System (DSS) yang mampu membantu menentukan rute terbaik secara otomatis.
+Dengan adanya perkembangan teknologi, permasalahan tersebut dapat dibantu dengan sistem berbasis komputer. Salah satu pendekatan yang dapat digunakan adalah struktur data graph, di mana setiap lokasi direpresentasikan sebagai node dan jalur antar lokasi sebagai edge.
 
-1.2 Rumusan Masalah
+Berdasarkan hal tersebut, pada penelitian ini dibuat sebuah Decision Support System (DSS) yang dapat membantu menentukan rute terbaik bagi kurir. Sistem ini memanfaatkan algoritma Dijkstra untuk mencari jalur dengan jarak terpendek sehingga proses pengiriman menjadi lebih efisien.
 
-Bagaimana merepresentasikan sistem rute kurir menggunakan graph?
+---
 
-Bagaimana menentukan rute tercepat antar lokasi?
+## 1.2 Rumusan Masalah
 
-Bagaimana mengimplementasikan algoritma graph dalam DSS?
+Berdasarkan latar belakang di atas, maka rumusan masalah dalam penelitian ini adalah:
 
-1.3 Tujuan
+1. Bagaimana merepresentasikan rute pengiriman kurir menggunakan graph?
+2. Bagaimana menentukan jalur terpendek antar lokasi?
+3. Bagaimana mengimplementasikan sistem DSS berbasis graph?
 
-Membuat model graph untuk sistem rute kurir
+---
 
-Mengimplementasikan algoritma Dijkstra
+## 1.3 Tujuan
 
-Menghasilkan rekomendasi rute terbaik
+Tujuan dari pembuatan sistem ini adalah:
 
-1.4 Manfaat
+1. Membuat model graph untuk merepresentasikan lokasi pengiriman
+2. Mengimplementasikan algoritma Dijkstra dalam sistem
+3. Menentukan rute terbaik berdasarkan jarak terpendek
 
-Membantu kurir menentukan rute optimal
+---
 
-Menghemat waktu dan biaya
+## 1.4 Manfaat
 
-Meningkatkan efisiensi distribusi
+Adapun manfaat dari sistem ini adalah:
 
-📘 BAB 2 – DASAR TEORI
+1. Membantu kurir dalam menentukan rute yang lebih efisien
+2. Menghemat waktu dan biaya pengiriman
+3. Memberikan gambaran penerapan graph dalam dunia nyata
 
-2.1 Struktur Data Graph
+---
 
-Graph adalah struktur data yang terdiri dari node (vertex) dan edge (hubungan antar node). Dalam kasus ini:
+# **BAB 2 – DASAR TEORI**
 
-Node = lokasi pengiriman
+## 2.1 Struktur Data Graph
 
-Edge = jalur antar lokasi
+Graph merupakan struktur data yang terdiri dari sekumpulan node (vertex) dan edge yang menghubungkan antar node tersebut. Dalam sistem ini, node digunakan untuk merepresentasikan lokasi pengiriman, sedangkan edge merepresentasikan jalur antar lokasi.
 
-Bobot = jarak atau waktu tempuh
+Graph yang digunakan termasuk weighted graph karena setiap edge memiliki bobot berupa jarak. Selain itu, graph bersifat tidak berarah karena jalur antar lokasi dapat dilalui dua arah.
 
-Graph yang digunakan adalah weighted graph, karena setiap edge memiliki nilai.
+---
 
-2.2 Decision Support System (DSS)
+## 2.2 Decision Support System (DSS)
 
-DSS adalah sistem yang membantu dalam pengambilan keputusan dengan memanfaatkan data dan model tertentu. Dalam penelitian ini, DSS digunakan untuk memberikan rekomendasi rute terbaik bagi kurir.
+Decision Support System (DSS) adalah sistem yang digunakan untuk membantu dalam pengambilan keputusan. DSS biasanya memanfaatkan data dan model tertentu untuk menghasilkan rekomendasi.
 
-2.3 Algoritma Dijkstra
+Dalam penelitian ini, DSS digunakan untuk memberikan rekomendasi rute terbaik bagi kurir berdasarkan jarak terpendek.
 
-Algoritma Dijkstra digunakan untuk mencari jalur terpendek dari satu node ke node lainnya dalam graph berbobot. Algoritma ini bekerja dengan memilih node dengan jarak terkecil secara bertahap hingga mencapai tujuan.
+---
 
-Kelebihan:
+## 2.3 Algoritma Dijkstra
 
--Akurat untuk graph berbobot positif
+Algoritma Dijkstra merupakan algoritma yang digunakan untuk mencari jalur terpendek dalam graph berbobot. Algoritma ini bekerja dengan memilih node dengan jarak terkecil secara bertahap hingga mencapai tujuan.
 
--Efisien untuk pencarian rute
+Kelebihan dari algoritma ini adalah mampu memberikan hasil yang akurat dan cukup efisien dalam pencarian jalur terpendek.
 
-📘 BAB 3 – ANALISIS DAN PERANCANGAN
+---
 
-3.1 Analisis Masalah
+# **BAB 3 – ANALISIS DAN PERANCANGAN**
 
-Permasalahan utama adalah menentukan rute tercepat dari titik awal ke tujuan dengan mempertimbangkan jarak antar lokasi.
+## 3.1 Analisis Masalah
 
-3.2 Desain Graph
+Permasalahan utama dalam sistem ini adalah bagaimana menentukan rute tercepat dari satu lokasi ke lokasi lainnya. Banyaknya jalur yang tersedia membuat proses pemilihan rute menjadi tidak sederhana jika dilakukan secara manual.
 
-Contoh graph:
+Oleh karena itu, dibutuhkan suatu sistem yang dapat membantu memilih rute terbaik secara otomatis.
 
-Node:
-A (Gudang), B, C, D (Tujuan)
-Edge (jarak):
-A–B = 5 km
-A–C = 10 km
-B–D = 3 km
-C–D = 2 km
-3.3 Flowchart Sistem
+---
 
-Alur sistem:
+## 3.2 Desain Graph
 
-Input data lokasi
-Input jarak antar lokasi
-Proses algoritma Dijkstra
-Menampilkan rute terbaik
-3.4 Use Case
+Dalam sistem ini, graph digunakan untuk merepresentasikan hubungan antar lokasi. Setiap lokasi menjadi node, dan setiap jalur antar lokasi menjadi edge dengan bobot jarak.
 
-Aktor: User (admin/kurir)
+Sebagai contoh:
 
-Fungsi:
+* Node: Kantor Pusat, Hub Denpasar, Hub Kuta, Penerima
+* Edge: hubungan antar lokasi dengan jarak tertentu
 
-Input data graph
-Menjalankan perhitungan
-Melihat hasil rute
-3.5 Struktur Node dan Edge
-Node: lokasi pengiriman
-Edge: jalur antar lokasi
-Weight: jarak
+---
 
-📘 BAB 4 – IMPLEMENTASI
+## 3.3 Flowchart Sistem
 
-4.1 Implementasi Sistem
+Alur kerja sistem secara umum adalah sebagai berikut:
 
-Sistem dibangun menggunakan bahasa pemrograman (misalnya Python). Graph direpresentasikan menggunakan adjacency list.
+1. Pengguna memasukkan data lokasi
+2. Sistem membentuk graph
+3. Pengguna memilih titik awal dan tujuan
+4. Sistem menjalankan algoritma Dijkstra
+5. Sistem menampilkan hasil rute terbaik
 
-4.2 Penjelasan Program
+---
 
-Program bekerja dengan:
+## 3.4 Use Case
 
-Membaca data graph
-Menjalankan algoritma Dijkstra
-Menghasilkan rute terpendek
+Aktor dalam sistem ini adalah pengguna (admin atau kurir).
+Pengguna dapat:
 
-4.3 Tampilan Sistem
+* Menambahkan lokasi
+* Menentukan titik awal dan tujuan
+* Melihat hasil rute
 
-Sistem memiliki fitur:
+---
 
--Input lokasi
+## 3.5 Struktur Node dan Edge
 
--Input jarak
+* Node: lokasi pengiriman
+* Edge: jalur antar lokasi
+* Bobot: jarak antar lokasi
 
--Tombol proses
+---
 
--Output rute
+# **BAB 4 – IMPLEMENTASI**
 
-📘 BAB 5 – PENGUJIAN DAN ANALISIS
+## 4.1 Implementasi Sistem
 
-5.1 Skenario Pengujian
+Sistem dibangun menggunakan Python dengan bantuan framework Streamlit untuk tampilan antarmuka. Graph direpresentasikan menggunakan adjacency list.
+
+---
+
+## 4.2 Penjelasan Program
+
+Program bekerja dengan cara membaca data node dan edge, kemudian menjalankan algoritma Dijkstra untuk menentukan rute terpendek. Hasil yang diperoleh berupa jalur yang harus dilalui serta total jarak.
+
+---
+
+## 4.3 Fitur Sistem
+
+Sistem yang dibuat memiliki beberapa fitur utama, yaitu:
+
+1. Input data lokasi dan hubungan antar lokasi
+2. Visualisasi lokasi dalam bentuk peta interaktif
+3. Proses pencarian rute menggunakan algoritma Dijkstra
+4. Menampilkan hasil rute terbaik
+5. Menampilkan proses perhitungan algoritma
+6. Tampilan sistem yang interaktif
+
+---
+
+# **BAB 5 – PENGUJIAN DAN ANALISIS**
+
+## 5.1 Skenario Pengujian
+
+Pengujian dilakukan dengan memilih titik awal dan tujuan, kemudian sistem akan menghitung rute terbaik.
 
 Contoh:
-Dari node A ke D
+Dari Kantor Pusat ke Penerima
+Hasil: sistem menampilkan jalur dengan jarak paling pendek.
 
-Hasil:
-Rute terbaik: A → B → D
+---
 
-Total jarak: 8 km
+## 5.2 Analisis Hasil
 
-5.2 Analisis Hasil
+Berdasarkan hasil pengujian, sistem mampu menentukan rute dengan benar sesuai dengan perhitungan algoritma Dijkstra. Jalur yang dihasilkan merupakan jalur dengan total jarak minimum.
 
-Hasil menunjukkan bahwa sistem mampu menentukan rute terpendek secara akurat berdasarkan data yang diberikan.
+---
 
-5.3 Kompleksitas Algoritma
+## 5.3 Kompleksitas Algoritma
 
-Algoritma Dijkstra memiliki kompleksitas:
+Algoritma Dijkstra memiliki kompleksitas sekitar O(V²) pada implementasi sederhana, dan dapat lebih efisien jika menggunakan struktur data tambahan seperti priority queue.
 
--O(V²) (versi sederhana)
+---
 
--O(E log V) (menggunakan priority queue)
+# **BAB 6 – KESIMPULAN**
 
-📘 BAB 6 – KESIMPULAN
+## 6.1 Kesimpulan
 
-6.1 Kesimpulan
+Berdasarkan hasil yang diperoleh, dapat disimpulkan bahwa penggunaan graph sangat efektif untuk memodelkan sistem rute kurir. Algoritma Dijkstra juga terbukti mampu menentukan jalur terpendek dengan baik.
 
--Graph efektif untuk memodelkan rute kurir
+Selain itu, sistem DSS yang dibuat dapat membantu pengguna dalam menentukan rute secara lebih cepat dan efisien.
 
--Algoritma Dijkstra berhasil menentukan jalur optimal
+---
 
--DSS membantu pengambilan keputusan secara cepat dan akurat
+## 6.2 Saran
 
-6.2 Saran
+Untuk pengembangan selanjutnya, sistem dapat ditambahkan fitur seperti:
 
--Menambahkan data real-time (traffic)
-
--Mengembangkan sistem berbasis web/mobile
-
--Menggunakan algoritma lain seperti A*
+* Data lalu lintas secara real-time
+* Pengembangan berbasis mobile
+* Penggunaan algoritma lain untuk perbandingan hasil
