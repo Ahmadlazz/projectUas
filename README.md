@@ -128,13 +128,41 @@ Sistem dibangun menggunakan Python dengan bantuan framework Streamlit untuk tamp
 
 ---
 
-## 4.2 Penjelasan Program
+## 4.2 Penjelasan kode
 
 Program bekerja dengan cara membaca data node dan edge, kemudian menjalankan algoritma Dijkstra untuk menentukan rute terpendek. Hasil yang diperoleh berupa jalur yang harus dilalui serta total jarak.
 
+Struktur Graph dan node
+****<img width="1124" height="369" alt="image" src="https://github.com/user-attachments/assets/a5d420be-66de-4c3d-9021-25da9464e23a" />
+
+-Pada bagian ini dibuat sebuah class untuk merepresentasikan graph menggunakan adjacency list. Struktur ini digunakan untuk menyimpan hubungan antar node beserta bobot jaraknya.
+
+-Dan yang dibawahnya memiliki fungsi ini digunakan untuk menambahkan hubungan (edge) antar node. Parameter weight menunjukkan jarak antar lokasi, sedangkan bidirectional menunjukkan bahwa hubungan bersifat dua arah.
+
+Algoritma Dijkstra
+
+<img width="1114" height="208" alt="image" src="https://github.com/user-attachments/assets/6df4ab02-bb5a-43e9-ad8a-c42da231263c" />
+
+-Fungsi ini merupakan inti dari sistem yang digunakan untuk mencari rute terpendek menggunakan algoritma Dijkstra.
+
+-Semua node diinisialisasi dengan jarak tak hingga, kemudian node awal diberikan nilai 0 sebagai titik awal perhitungan.
+
+<img width="1107" height="597" alt="image" src="https://github.com/user-attachments/assets/9db2332d-1639-4eca-a486-cdca863793de" />
+
+-di bagian ini akan mengatur alur proses navigasi dari sistem tersebut, sistem ini menggunakan priority queve untuk mengambil node dengan jarak yang paling dekat, bagian selanjutnya juga merupakan proses relaksasi yaitu  memperbarui jika ditemukan jalur yang lebih pendek dan terakhir ada bagian yang memiliki fungsi sebagai menyimpan jalur yang dilalui sehingga membentuk rute terakhir
+
+
+## 4.3.Tampilan Sistem
+<img width="1365" height="677" alt="image" src="https://github.com/user-attachments/assets/08f0b527-bcef-42fe-bdd0-bf292bf6e7e9" />
+
+
+-Seperti inilah tampilan dari sistemnya ini belum melakukan sebuah proses pencarian rute tercepat,dari matriks ketetanggaan menggunakan adjacency list, serta kami menggunakan map bali sebagai contoh nyata pada visualisasi spasial
+
+
+
 ---
 
-## 4.3 Fitur Sistem
+## 4.4 Fitur Sistem
 
 Sistem yang dibuat memiliki beberapa fitur utama, yaitu:
 
@@ -149,25 +177,57 @@ Sistem yang dibuat memiliki beberapa fitur utama, yaitu:
 
 # **BAB 5 – PENGUJIAN DAN ANALISIS**
 
+<img width="1365" height="678" alt="image" src="https://github.com/user-attachments/assets/7970dc78-54f3-4d03-a448-8bee7be10b16" />
+
+<img width="1365" height="677" alt="image" src="https://github.com/user-attachments/assets/6e8c230b-b603-499e-ab37-dadb561205f2" />
+
+
 ## 5.1 Skenario Pengujian
 
-Pengujian dilakukan dengan memilih titik awal dan tujuan, kemudian sistem akan menghitung rute terbaik.
+Pengujian sistem dilakukan dengan memilih titik awal dan tujuan pengiriman melalui antarmuka yang tersedia. Pada pengujian ini, pengguna memilih titik awal Kantor Pusat dan titik tujuan Penerima C.
 
-Contoh:
-Dari Kantor Pusat ke Penerima
-Hasil: sistem menampilkan jalur dengan jarak paling pendek.
+Setelah itu, sistem akan memproses data graph yang telah tersedia dalam bentuk adjacency list, yang berisi hubungan antar node beserta jarak masing-masing. Selanjutnya, pengguna menekan tombol “Hitung Rute Optimal” untuk memulai proses perhitungan.
 
 ---
 
-## 5.2 Analisis Hasil
+## 5.2 Hasil Pengujian
 
-Berdasarkan hasil pengujian, sistem mampu menentukan rute dengan benar sesuai dengan perhitungan algoritma Dijkstra. Jalur yang dihasilkan merupakan jalur dengan total jarak minimum.
+Berdasarkan hasil pengujian, sistem berhasil menampilkan data graph dalam bentuk matriks ketetanggaan (adjacency list) yang berisi node dan jarak antar lokasi.
+
+Selain itu, sistem juga menampilkan visualisasi rute dalam bentuk peta digital. Pada peta tersebut terlihat jalur distribusi yang menghubungkan titik awal hingga tujuan.
+
+Rute yang dihasilkan merupakan jalur optimal yang telah dihitung menggunakan algoritma Dijkstra. Jalur tersebut ditampilkan secara visual dengan garis berwarna pada peta, sehingga memudahkan pengguna dalam memahami rute yang harus dilalui.
+
+Sistem juga menunjukkan total jumlah node dan edge yang digunakan dalam graph, yaitu sebanyak 6 node dan 8 edge.
 
 ---
 
-## 5.3 Kompleksitas Algoritma
+## 5.3 Analisis Hasil
 
-Algoritma Dijkstra memiliki kompleksitas sekitar O(V²) pada implementasi sederhana, dan dapat lebih efisien jika menggunakan struktur data tambahan seperti priority queue.
+Berdasarkan hasil yang diperoleh, sistem mampu menentukan rute distribusi dengan baik sesuai dengan data yang diberikan. Algoritma Dijkstra berhasil memilih jalur dengan jarak paling minimum dari titik awal menuju tujuan.
+
+Visualisasi peta yang ditampilkan juga membantu dalam memahami hasil perhitungan secara lebih jelas, karena pengguna dapat melihat jalur secara langsung sesuai kondisi geografis.
+
+Selain itu, penggunaan adjacency list sebagai representasi graph memudahkan sistem dalam melakukan proses pencarian jalur.
+
+Namun, sistem masih memiliki keterbatasan, yaitu belum mempertimbangkan kondisi lalu lintas secara real-time. Oleh karena itu, pengembangan selanjutnya dapat menambahkan fitur tersebut agar hasil rute menjadi lebih akurat.
+
+---
+
+## 5.4 Kompleksitas Algoritma
+
+Algoritma yang digunakan dalam sistem ini adalah algoritma Dijkstra untuk menentukan jalur terpendek. Dalam implementasinya, algoritma ini menggunakan struktur data priority queue untuk memilih node dengan jarak terkecil secara efisien.
+
+Secara umum, kompleksitas waktu dari algoritma Dijkstra bergantung pada cara implementasinya. Pada sistem ini, karena menggunakan priority queue (heap), maka kompleksitas waktu yang dihasilkan adalah sekitar O(E log V), di mana:
+
+V (Vertex) adalah jumlah node atau lokasi
+E (Edge) adalah jumlah hubungan antar lokasi
+
+Kompleksitas tersebut menunjukkan bahwa semakin banyak jumlah node dan edge dalam graph, maka waktu yang dibutuhkan untuk proses pencarian rute juga akan meningkat, namun masih dalam batas yang efisien.
+
+Selain itu, kompleksitas ruang (space complexity) dari algoritma ini adalah O(V), karena sistem menyimpan data jarak dan jalur untuk setiap node.
+
+Berdasarkan hasil pengujian yang telah dilakukan, algoritma Dijkstra mampu bekerja dengan baik dalam menentukan rute optimal meskipun jumlah node dan edge bertambah. Hal ini menunjukkan bahwa algoritma yang digunakan sudah cukup efisien untuk kebutuhan sistem penentuan rute kurir.
 
 ---
 
