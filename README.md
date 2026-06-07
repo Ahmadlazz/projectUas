@@ -1,4 +1,17 @@
 # projectUas
+Nama_NIM_Github:
+
+I Gusti Agung Ari Regina Dharmagita_
+2501010379_
+gunggita49-oss
+
+Dania syifa rezkia_
+2501010012_
+daniasif
+
+Ahmad Paesoel_
+2501010143_
+Ahmadlazz
 
 # **BAB 1 – PENDAHULUAN**
 
