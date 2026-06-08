@@ -1,7 +1,7 @@
 # projectUas
 Nama_NIM_Github:
 
-I Gusti Ari Regina Dharmagita_
+I Gusti Agung Ari Regina Dharmagita_
 2501010379_
 gunggita49-oss
 
