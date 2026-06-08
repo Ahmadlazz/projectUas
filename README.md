@@ -166,7 +166,7 @@ Algoritma Dijkstra
 
 
 ## 4.3.Tampilan Sistem
-<img width="1365" height="677" alt="image" src="https://github.com/user-attachments/assets/08f0b527-bcef-42fe-bdd0-bf292bf6e7e9" />
+<img width="1280" height="800" alt="WhatsApp Image 2026-06-07 at 09 14 41" src="https://github.com/user-attachments/assets/bb4897f7-ec05-475e-b399-c9d34e99039a" />
 
 
 -Seperti inilah tampilan dari sistemnya ini belum melakukan sebuah proses pencarian rute tercepat,dari matriks ketetanggaan menggunakan adjacency list, serta kami menggunakan map bali sebagai contoh nyata pada visualisasi spasial
@@ -190,9 +190,9 @@ Sistem yang dibuat memiliki beberapa fitur utama, yaitu:
 
 # **BAB 5 – PENGUJIAN DAN ANALISIS**
 
-<img width="1365" height="678" alt="image" src="https://github.com/user-attachments/assets/7970dc78-54f3-4d03-a448-8bee7be10b16" />
+<img width="1280" height="800" alt="WhatsApp Image 2026-06-07 at 09 14 39" src="https://github.com/user-attachments/assets/b227e275-214c-4092-9be8-3136f544f081" />
 
-<img width="1365" height="677" alt="image" src="https://github.com/user-attachments/assets/6e8c230b-b603-499e-ab37-dadb561205f2" />
+<img width="1280" height="800" alt="WhatsApp Image 2026-06-07 at 09 14 40" src="https://github.com/user-attachments/assets/bb0b7704-7500-429c-80b7-b93e0842f32f" />
 
 
 ## 5.1 Skenario Pengujian
@@ -261,3 +261,9 @@ Untuk pengembangan selanjutnya, sistem dapat ditambahkan fitur seperti:
 * Data lalu lintas secara real-time
 * Pengembangan berbasis mobile
 * Penggunaan algoritma lain untuk perbandingan hasil
+
+---
+
+# **VIDEO DEMO**
+https://youtu.be/eXKI02Ej8s0
+
